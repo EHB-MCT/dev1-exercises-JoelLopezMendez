@@ -25,7 +25,7 @@ function drawCros() {
     context.stroke();
 
     context.beginPath();
-    context.moveTo(50, 200)
+    context.moveTo(50, 200);
     context.lineTo(200, 50);
     context.stroke();
 
