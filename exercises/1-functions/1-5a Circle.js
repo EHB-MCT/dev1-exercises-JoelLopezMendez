@@ -17,17 +17,17 @@ function drawRect1() {
     context.fill();
 }
 
-function drawCicle() {
-    context.fillStyle = 'yellow';
-    context.beginPath();
-    context.arc(225, 300, 100, Math.PI, 0);
-    context.fill();
-}
-
 function drawRect() {
     context.fillStyle = 'blue';
     context.lineWidth = '3';
     context.beginPath();
     context.rect(50, 300, 350, 100);
+    context.fill();
+}
+
+function drawCicle() {
+    context.fillStyle = 'yellow';
+    context.beginPath();
+    context.arc(230, 300, 100, 0, Math.PI, true);
     context.fill();
 }
