@@ -21,6 +21,26 @@ function drawRect() {
 function drawLine() {
     context.lineWidth = '2';
     context.beginPath();
+    context.rect(50, 50, 300, 300);
+    context.fill();
+    context.stroke();
+
+    context.rect(100, 50, 250, 250);
+    context.fill();
+    context.stroke();
+
+    context.rect(175, 100, 175, 200);
+    context.fill();
+    context.stroke();
+
+    context.rect(175, 150, 125, 150);
+    context.fill();
+    context.stroke();
+}
+
+/* function drawLine() {
+    context.lineWidth = '2';
+    context.beginPath();
     context.moveTo(100, 50);
     context.lineTo(100, 300);
     context.lineTo(330, 300);
@@ -43,4 +63,4 @@ function drawLine() {
     context.lineTo(280, 150);
     context.lineTo(280, 300);
     context.stroke();
-}
+} */
