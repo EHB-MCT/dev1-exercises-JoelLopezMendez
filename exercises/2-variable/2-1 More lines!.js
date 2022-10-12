@@ -9,31 +9,32 @@ let width = context.canvas.width;
 let height = context.canvas.height;
 
 let margin = 50;
+let spacing = 50;
 
 drawLines();
 
 function drawLines() {
     context.lineWidth = 2;
     context.beginPath();
-    context.moveTo(margin, margin);
-    context.lineTo(width - 100, margin);
+    context.moveTo(margin, spacing);
+    context.lineTo(width - margin, margin);
 
-    context.lineTo(width - 100, margin);
-    context.lineTo(margin, margin + 50);
+    context.lineTo(width - margin, margin);
+    context.lineTo(margin, spacing * 2);
 
-    context.lineTo(margin, margin + 50);
-    context.lineTo(width - 100, margin + 50);
+    context.lineTo(margin, spacing * 2);
+    context.lineTo(width - margin, spacing * 2);
 
-    context.lineTo(width - 100, margin + 50);
-    context.lineTo(margin, margin + 100);
+    context.lineTo(width - margin, spacing * 2);
+    context.lineTo(margin, spacing * 3);
 
-    context.lineTo(width - 100, margin + 100);
-    context.lineTo(margin, margin + 150);
+    context.lineTo(width - margin, spacing * 3);
+    context.lineTo(margin, spacing * 4);
 
-    context.lineTo(width - 100, margin + 150);
-    context.lineTo(margin, margin + 200);
+    context.lineTo(width - margin, spacing * 4);
+    context.lineTo(margin, spacing * 5);
 
-    context.lineTo(width - 100, margin + 200);
-    context.lineTo(margin, margin);
+    context.lineTo(width - margin, spacing * 5);
+    context.lineTo(margin, spacing);
     context.stroke();
 }
