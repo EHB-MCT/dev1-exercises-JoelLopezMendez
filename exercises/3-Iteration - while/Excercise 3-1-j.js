@@ -1,0 +1,57 @@
+"use strict";
+import context from "../../Script/Context.js";
+
+drawRectBlue();
+drawCicle();
+drawCicleR();
+drawCicleL();
+
+
+function drawRectBlue() {
+    context.fillStyle = '#33A2FF';
+    context.beginPath();
+    context.rect(50, 50, 300, 300);
+    context.fill();
+}
+
+function drawCicle() {
+    let i = 0;
+
+    while (i < 10) {
+        context.strokeStyle = "white";
+        context.lineWidth = "2";
+        context.beginPath();
+        context.arc(200, 200, 10 + i * 15, 0, Math.PI * 2);
+        context.stroke();
+
+        i++;
+    }
+}
+
+function drawCicleR() {
+    let i = 0;
+
+    while (i <= 10) {
+        context.strokeStyle = "white";
+        context.lineWidth = "2";
+        context.beginPath();
+        context.arc(100, 200, 10 + i * 15, 0, Math.PI * 2);
+        context.stroke();
+
+        i++;
+    }
+}
+
+function drawCicleL() {
+    let i = 0;
+
+    while (i <= 10) {
+        context.strokeStyle = "white";
+        context.lineWidth = "2";
+        context.beginPath();
+        context.arc(300, 200, 10 + i * 15, 0, Math.PI * 2);
+        context.stroke();
+
+        i++;
+    }
+}

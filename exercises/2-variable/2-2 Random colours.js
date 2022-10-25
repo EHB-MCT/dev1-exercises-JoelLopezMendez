@@ -8,7 +8,6 @@ let context = canvas.getContext('2d');
 let width = context.canvas.width;
 let height = context.canvas.height;
 
-
 let size = 500;
 
 drawRec(50, 50, size);
