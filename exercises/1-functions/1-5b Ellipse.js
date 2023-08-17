@@ -1,33 +1,36 @@
 "use strict";
 
-let canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let context = canvas.getContext('2d');
+import context from "../../Scripts/Context.js";
+import * as Utils from "../../Scripts/Utils.js";
 
-drawRect1();
+
+context.fillStyle = Utils.rgb(255, 128, 101);
+context.fillRect(50, 50, 250, 300);
+
+context.fillStyle = Utils.rgb(255, 255, 101);
+Utils.fillEllipse(175, 250, 100, 50);
+
+
+context.fillStyle = Utils.rgb(0, 255, 255);
+context.fillRect(50, 250, 250, 100);
+
+/* drawRect();
 drawEllipse();
-drawRect();
-
-function drawRect1() {
-    context.fillStyle = '#FE8B00';
-    context.lineWidth = '3';
-    context.beginPath();
-    context.rect(50, 50, 350, 350);
-    context.fill();
-}
+drawWater();
 
 function drawRect() {
-    context.fillStyle = 'blue';
-    context.lineWidth = '3';
-    context.beginPath();
-    context.rect(50, 300, 350, 100);
-    context.fill();
+    context.fillStyle = "orange";
+    context.fillRect(25, 25, 300, 300);
 }
 
 function drawEllipse() {
-    context.fillStyle = 'yellow';
+    context.fillStyle = "yellow";
     context.beginPath();
-    context.ellipse(230, 320, 150, 50, 0, 0, Math.PI, true);
+    context.ellipse(175, 225, 100, 50, 0, 0, Math.PI * 2);
     context.fill();
 }
+
+function drawWater() {
+    context.fillStyle = "blue";
+    context.fillRect(25, 225, 300, 100);
+} */

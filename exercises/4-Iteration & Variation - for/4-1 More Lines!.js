@@ -3,36 +3,42 @@ import context from "../../Scripts/Context.js";
 import * as Utils from "../../Scripts/Utils.js";
 
 let width = 600;
-let height = 300;
+let heigh = 300;
 
-let horizontal = 60;
-let vertical = 30;
+context.fillStyle = "orange";
+context.fillRect(0, 0, width, heigh);
 
-drawRectRed();
+context.strokeStyle = "white";
+
+for (let i = 0; i < 60; i++) {
+    Utils.drawLine(0 + i * 10, 0, width - i * 10, heigh);
+
+    for (let i = 0; i < 30; i++) {
+        Utils.drawLine(0, 5 + i * 10, width, (heigh - 5) - i * 10);
+    }
+}
+
+
+/* let width = 600;
+let heigh = 300;
+
+drawRect();
 drawLine();
-drawLineV();
 
-function drawRectRed() {
-    context.fillStyle = '#FF9300';
-    context.beginPath();
-    context.rect(0, 0, 600, 300);
-    context.fill();
+function drawRect() {
+    context.fillStyle = "orange";
+    context.fillRect(0, 0, width, heigh);
 }
 
 function drawLine() {
-    let step = width / horizontal;
+    context.strokeStyle = "white";
+    context.lineWidth = 2;
 
-    for (let i = 0; i < 60; i++) {
-        context.strokeStyle = "white";
-        context.lineWidth = "2";
-        Utils.drawLine(0 + i * step, 0, width - i * step, height);
+    for (let i = 0; i <= 60; i++) {
+        Utils.drawLine(0, 0 + i * 5, width, heigh - i * 5);
     }
-}
 
-function drawLineV() {
-    let step1 = height / vertical;
-
-    for (let i = 0; i <= 30; i++) {
-        Utils.drawLine(0, 0 + i * step1, width, height - i * step1);
+    for (let j = 0; j < 30; j++) {
+        Utils.drawLine(0 + j * 20, 0, width - j * 20, heigh);
     }
-}
+} */

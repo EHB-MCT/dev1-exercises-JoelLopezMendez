@@ -1,5 +1,5 @@
 "use strict";
-import context from "../../Script/Context.js";
+import context from "../../Scripts/Context.js";
 
 drawRectBlue();
 drawCicle();

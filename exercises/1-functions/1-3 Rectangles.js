@@ -1,47 +1,54 @@
 "use strict";
 
-let canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let context = canvas.getContext('2d');
+import context from "../../Scripts/Context.js";
+import * as Utils from "../../Scripts/Utils.js";
 
 
+context.strokeStyle = "red";
+context.strokeRect(50, 50, 150, 150);
 
-drawRectRed();
-drawRectBlack();
+context.strokeRect(200, 200, 150, 150);
 
-function drawRectRed() {
-    context.strokeStyle = 'red';
+context.beginPath();
+context.rect(125, 125, 150, 150);
+context.stroke();
+context.fill();
+
+context.strokeRect(275, 75, 50, 50);
+
+context.fillRect(325, 50, 25, 25);
+
+context.strokeRect(75, 275, 50, 50);
+
+context.fillRect(50, 325, 25, 25);
+
+
+// Utils.drawLine(50, 50, 350, 350);
+
+
+/* drawStrokrRect();
+drawBigRect();
+
+function drawBigRect() {
+    context.strokeStyle = "red";
     context.beginPath();
-    context.rect(50, 50, 150, 150);
+    context.rect(150, 150, 150, 150);
+    context.fill();
     context.stroke();
 
     context.beginPath();
-    context.rect(350, 350, 150, 150);
-    context.stroke();
-
-    context.beginPath();
-    context.rect(70, 400, 80, 80);
-    context.stroke();
-
-    context.beginPath();
-    context.rect(400, 70, 80, 80);
-    context.stroke();
+    context.rect(360, 60, 30, 30);
+    context.rect(60, 360, 30, 30);
+    context.fill();
 }
 
-function drawRectBlack() {
-    context.strokeStyle = 'black';
+function drawStrokrRect() {
+    context.strokeStyle = "red";
     context.beginPath();
-    context.rect(480, 20, 50, 50);
-    context.fill();
+    context.rect(75, 75, 150, 150);
+    context.rect(225, 225, 150, 150);
 
-    context.beginPath();
-    context.rect(20, 480, 50, 50);
-    context.fill();
-
-    context.strokeStyle = 'red';
-    context.beginPath();
-    context.rect(150, 150, 250, 250);
-    context.fill();
+    context.rect(300, 90, 60, 60);
+    context.rect(90, 300, 60, 60);
     context.stroke();
-}
+} */

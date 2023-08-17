@@ -1,40 +1,50 @@
 "use strict";
-
-let canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let context = canvas.getContext('2d');
+import context from "../../Scripts/Context.js";
+import * as Utils from "../../Scripts/Utils.js";
 
 let width = context.canvas.width;
 let height = context.canvas.height;
 
-let margin = 50;
-let spacing = 50;
+let margin = 25;
+let space = 25;
+let x = 50;
+let y = 50;
 
-drawLines();
+context.beginPath();
+context.moveTo(margin, y);
+context.lineTo(width - margin, y);
+context.lineTo(margin, y + space);
+context.lineTo(width - margin, y + space);
+context.lineTo(margin, y + space * 2);
+context.lineTo(width - margin, y + space * 2);
+context.lineTo(margin, y + space * 3);
+context.lineTo(width - margin, y + space * 3);
+context.lineTo(margin, y + space * 4);
+context.lineTo(width - margin, y + space * 4);
+context.lineTo(margin, y + space * 5);
+context.lineTo(width - margin, y + space * 5);
+context.lineTo(margin, y + space * 6);
+context.lineTo(width - margin, y + space * 6);
+context.lineTo(margin, y);
+context.stroke();
 
-function drawLines() {
-    context.lineWidth = 2;
+/* let y = 100; //Spatie
+let margin = 300;
+
+drawLine();
+
+function drawLine() {
+    context.lineWidth = 3;
     context.beginPath();
-    context.moveTo(margin, spacing);
-    context.lineTo(width - margin, margin);
+    context.moveTo(margin, y);
+    context.lineTo(width - margin, y);
+    context.lineTo(margin, y * 2);
+    context.lineTo(width - margin, y * 2);
+    context.lineTo(margin, y * 3);
+    context.lineTo(width - margin, y * 3);
+    context.lineTo(margin, y * 4);
+    context.lineTo(width - margin, y * 4);
+    context.lineTo(margin, y);
 
-    context.lineTo(width - margin, margin);
-    context.lineTo(margin, spacing * 2);
-
-    context.lineTo(margin, spacing * 2);
-    context.lineTo(width - margin, spacing * 2);
-
-    context.lineTo(width - margin, spacing * 2);
-    context.lineTo(margin, spacing * 3);
-
-    context.lineTo(width - margin, spacing * 3);
-    context.lineTo(margin, spacing * 4);
-
-    context.lineTo(width - margin, spacing * 4);
-    context.lineTo(margin, spacing * 5);
-
-    context.lineTo(width - margin, spacing * 5);
-    context.lineTo(margin, spacing);
     context.stroke();
-}
+} */

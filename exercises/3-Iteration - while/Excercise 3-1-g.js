@@ -1,26 +1,34 @@
 "use strict";
-import context from "../../Script/Context.js";
+import context from "../../Scripts/Context.js";
+import * as Utils from "../../Scripts/Utils.js";
 
-drawRectBlue();
+context.fillStyle = Utils.rgb(0, 150, 255);
+context.fillRect(50, 50, 200, 200);
+
+
+context.strokeStyle = "white";
+for (let i = 0; i < 10; i++) {
+    Utils.strokeCircle(150, 150, 10 + i * 10);
+}
+
+/* drawRectBlue();
 drawCicle();
 
 function drawRectBlue() {
     context.fillStyle = '#33A2FF';
     context.beginPath();
-    context.rect(50, 50, 300, 300);
+    context.rect(50, 50, 200, 200);
     context.fill();
 }
 
 function drawCicle() {
+
     let i = 0;
 
-    while (i < 10) {
-        context.strokeStyle = "white";
-        context.lineWidth = "2";
-        context.beginPath();
-        context.arc(200, 200, 10 + i * 15, 0, Math.PI * 2);
-        context.stroke();
+    context.strokeStyle = "#ffffff";
+    while (i <= 12) {
+        utils.strokeCircle(150, 150, 10 + i * 10);
 
         i++;
     }
-}
+} */

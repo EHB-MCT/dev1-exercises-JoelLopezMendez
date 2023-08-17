@@ -1,4 +1,5 @@
 "use strict";
+
 /**@type {CanvasRenderingContext2D} */
 let context;
 
@@ -11,4 +12,10 @@ function getCanvasContext() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     context = canvas.getContext('2d');
+}
+
+window.onresize = reload;
+
+function reload() {
+    location.reload();
 }

@@ -1,28 +1,46 @@
 "use strict";
 
-let canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let context = canvas.getContext('2d');
+import context from "../../Scripts/Context.js";
+import * as Utils from "../../Scripts/Utils.js";
 
 let width = context.canvas.width;
 let height = context.canvas.height;
 
-context.fillStyle = "#D6D6D6";
+context.fillStyle = "darkblue";
 context.fillRect(0, 0, width, height);
 
-context.fillStyle = "#00155F";
-context.fillRect(0, 0, width / 4, height);
+context.fillStyle = "lightblue";
+context.fillRect(0, height / 2.5 * 2, width, height / 4);
 
-context.fillStyle = "#00155F";
-context.fillRect(width / 1.3, 0, width, height);
+context.fillStyle = "gray";
+context.fillRect(width / 5, 0, width / 2, height);
 
-context.fillStyle = "#EA5303";
-context.fillRect(0, height / 5, width, height / 3);
-
-context.fillStyle = "#03EADC";
-context.fillRect(0, height / 1.4, width / 4 + 1, height);
+context.fillStyle = "red";
+context.fillRect(0, height / 8, width, height / 2);
 
 
-context.fillStyle = "#03EADC";
-context.fillRect(width / 1.3 - 1, height / 1.4, width, height);
+/* drawRectCeleste();
+drawRectBlue();
+drawRectGrijs();
+drawRectRed();
+
+function drawRectGrijs() {
+    context.fillStyle = "#eadfdc";
+    context.fillRect(width / 4, 0, width / 2, height);
+}
+
+function drawRectRed() {
+    context.fillStyle = "#d33715";
+    context.fillRect(0, height / 9, width, height / 2);
+}
+
+function drawRectCeleste() {
+    context.fillStyle = "#00fff9";
+    context.fillRect(0, 0, width, height);
+}
+
+function drawRectBlue() {
+
+    context.fillStyle = "#0527d3";
+    context.fillRect(0, 0 - height / 5, width, height);
+} */

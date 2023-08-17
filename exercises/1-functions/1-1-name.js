@@ -1,59 +1,80 @@
 "use strict";
+import context from "../../Scripts/Context.js";
+import * as Utils from "../../Scripts/Utils.js";
 
-let canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let context = canvas.getContext('2d');
 
 drawName();
 
 function drawName() {
     /* J */
-    context.lineWidth = 15;
-    context.strokeStyle = 'Red';
-    context.beginPath();
-    context.moveTo(230, 200);
-    context.lineTo(330, 200);
-    context.stroke();
-
-    context.beginPath();
-    context.moveTo(280, 200);
-    context.lineTo(350, 400);
-    context.lineTo(200, 400);
-    context.lineTo(200, 370);
-    context.stroke();
-
-    /* L */
-    context.strokeStyle = 'green';
-    context.beginPath();
-    context.moveTo(700, 400);
-    context.lineTo(650, 180);
-    context.stroke();
-
-    /* E */
-    context.strokeStyle = 'yellow';
-    context.beginPath();
-    context.moveTo(600, 200);
-    context.lineTo(480, 200);
-    context.lineTo(560, 400);
-    context.lineTo(800, 400);
-    context.stroke();
-
-    context.beginPath();
-    context.moveTo(600, 300);
-    context.lineTo(480, 300);
-    context.stroke();
+    Utils.drawLine(50, 50, 150, 50);
+    Utils.drawLine(100, 50, 100, 150);
+    Utils.drawLine(100, 150, 50, 125);
 
     /* O */
-    context.strokeStyle = 'blue';
-    context.lineWidth = 15;
+    Utils.drawLine(175, 50, 250, 50);
+    Utils.drawLine(250, 50, 250, 150);
+    Utils.drawLine(250, 150, 175, 150);
+    Utils.drawLine(175, 150, 175, 50);
+
+    /* E */
+    Utils.drawLine(275, 50, 375, 50);
+    Utils.drawLine(275, 50, 275, 150);
+    Utils.drawLine(275, 150, 375, 150);
+    Utils.drawLine(275, 75, 375, 75);
+
+    /* L */
+    Utils.drawLine(400, 50, 400, 150);
+    Utils.drawLine(400, 150, 450, 150);
+}
+
+
+/* draw();
+
+function draw() {
+    // *J*
+    context.strokeStyle = "#008000";
+    context.lineWidth = 5;
     context.beginPath();
-    context.moveTo(400, 405);
-    context.lineTo(350, 200);
-    context.lineTo(430, 200);
-    context.lineTo(520, 400);
-    context.lineTo(395, 400);
+    context.moveTo(75, 50);
+    context.lineTo(125, 50);
     context.stroke();
 
+    context.beginPath();
+    context.moveTo(100, 50);
+    context.lineTo(90, 150);
+    context.lineTo(60, 130);
+    context.stroke();
 
-}
+    // *O*
+    context.fillStyle = "#ff0000";
+    context.beginPath();
+    context.moveTo(150, 50);
+    context.lineTo(225, 50);
+    context.lineTo(220, 150);
+    context.lineTo(160, 150);
+    context.lineTo(152, 48);
+    context.fill();
+
+    // *E*
+    context.strokeStyle = "#800080";
+    context.beginPath();
+    context.moveTo(330, 55);
+    context.lineTo(250, 50);
+    context.lineTo(250, 150);
+    context.lineTo(340, 140);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(250, 110);
+    context.lineTo(300, 100);
+    context.stroke();
+
+    // *L*
+    context.strokeStyle = "red";
+    context.lineWidth = 3;
+    context.beginPath();
+    context.moveTo(340, 55);
+    context.lineTo(350, 150);
+    context.lineTo(400, 150);
+    context.stroke();
+} */

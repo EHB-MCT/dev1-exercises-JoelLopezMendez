@@ -1,33 +1,37 @@
 "use strict";
 
-let canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let context = canvas.getContext('2d');
+import context from "../../Scripts/Context.js";
+import * as Utils from "../../Scripts/Utils.js";
 
-drawRect1();
-drawCicle();
-drawRect();
 
-function drawRect1() {
-    context.fillStyle = '#FE8B00';
-    context.lineWidth = '3';
-    context.beginPath();
-    context.rect(50, 50, 350, 350);
-    context.fill();
-}
+context.fillStyle = Utils.rgb(255, 128, 101);
+context.fillRect(50, 50, 250, 300);
+
+context.fillStyle = Utils.rgb(255, 255, 101);
+Utils.fillCircle(175, 250, 75);
+
+context.fillStyle = "blue";
+context.fillRect(50, 250, 250, 100);
+
+
+/* drawRect();
+drawArct();
+drawWater();
 
 function drawRect() {
-    context.fillStyle = 'blue';
-    context.lineWidth = '3';
+    context.fillStyle = "orange";
+    context.fillRect(25, 25, 300, 300);
+}
+
+function drawArct() {
+
+    context.fillStyle = "yellow";
     context.beginPath();
-    context.rect(50, 300, 350, 100);
+    context.arc(175, 225, 100, 0, Math.PI * 2);
     context.fill();
 }
 
-function drawCicle() {
-    context.fillStyle = 'yellow';
-    context.beginPath();
-    context.arc(230, 300, 100, 0, Math.PI, true);
-    context.fill();
-}
+function drawWater() {
+    context.fillStyle = "blue";
+    context.fillRect(25, 225, 300, 100);
+} */

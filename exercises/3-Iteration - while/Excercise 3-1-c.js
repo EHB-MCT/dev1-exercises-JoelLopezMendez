@@ -1,46 +1,33 @@
 "use strict";
-import context from "../../Script/Context.js";
+import context from "../../Scripts/Context.js";
+import * as Utils from "../../Scripts/Utils.js";
 
-drawRectRed();
-drawLine();
-drawLine1();
+context.fillStyle = Utils.rgb(0, 150, 255);
+context.fillRect(50, 50, 200, 200);
 
-
-function drawRectRed() {
-    context.fillStyle = '#33A2FF';
-    context.beginPath();
-    context.rect(50, 50, 300, 300);
-    context.fill();
+context.strokeStyle = "white";
+for (let i = 0; i < 6; i++) {
+    Utils.drawLine(115 + i * 15, 50, 115 + i * 15, 250);
+    Utils.drawLine(50, 115 + i * 15, 250, 115 + i * 15);
 }
 
 
+/* drawRectBlue();
+drawLine();
+
+
+function drawRectBlue() {
+    context.fillStyle = '#33A2FF';
+    context.fillRect(50, 50, 200, 200);
+}
 
 function drawLine() {
     let i = 0;
 
-    while (i <= 5) {
-        context.strokeStyle = "white";
-        context.lineWidth = "2";
-        context.beginPath();
-        context.moveTo(50, 150 + i * 20);
-        context.lineTo(350, 150 + i * 20);
-        context.stroke();
-
+    context.strokeStyle = "#ffffff";
+    while (i < 5) {
+        utils.drawLine(50, 120 + i * 15, 250, 120 + i * 15);
+        utils.drawLine(120 + i * 15, 50, 120 + i * 15, 250);
         i++;
     }
-}
-
-function drawLine1() {
-    let i = 0;
-
-    while (i <= 5) {
-        context.strokeStyle = "white";
-        context.lineWidth = "2";
-        context.beginPath();
-        context.moveTo(150 + i * 20, 50);
-        context.lineTo(150 + i * 20, 350);
-        context.stroke();
-
-        i++;
-    }
-}
+} */
